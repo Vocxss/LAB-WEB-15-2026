@@ -1,0 +1,172 @@
+* {
+    /* box-sizing: border-box; */
+    overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
+}
+
+nav {
+    padding: 4px 6px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    width: 20%;
+}
+
+nav div {
+    display: flex;
+    gap: 12px;
+}
+
+nav div a  {
+    color: white;
+    text-decoration: none;
+}
+
+nav div a:hover  {
+    color: blue;
+}
+
+#tabel-informasi, #informasi-lokal, #galeri, #aktivitas {
+    margin: 0px 24px;
+}
+
+#beranda {
+    position: relative;
+}
+
+#beranda .hero-text {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+#beranda img {
+    width: 100vw;
+    height: 100vh;
+    /* filter: brightness(60%);    */
+}
+
+#galeri {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+#galeri div {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#galeri h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+#galeri img{
+    width: 15%;
+    height: auto;
+    object-fit: cover;
+}
+
+#aktivitas {
+    overflow: hidden;
+}
+
+#aktivitas ul {
+    padding: 0px;
+    gap: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#aktivitas ul li {
+    border: 1px solid blue;
+    box-shadow: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+#aktivitas ul li:hover {
+    transform: translateY(-5px);
+}
+
+#informasi-lokal {
+    overflow: hidden;
+}
+
+#informasi-lokal ol {
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+}
+
+#informasi-lokal ol li {
+    border: 1px solid blue;
+    box-shadow: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+#tabel-informasi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid blue;
+}
+
+tr, td {
+    padding: 4px;
+    text-align: center;
+}
+
+#kontak {
+    overflow: hidden;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+fieldset button {
+    border:none;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+fieldset button:hover {
+    background-color: black;
+}
+
+footer {
+    padding: 12px;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+}

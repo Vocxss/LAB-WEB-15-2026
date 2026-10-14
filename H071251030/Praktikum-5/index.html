@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.hugeicons.com/font/icons.css" />
+
+    <title>Document</title>
+
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Nunito Sans", sans-serif;
+        background-color: #383967;
+      }
+
+      @theme {
+        --color-soft-pink: #ecbbfa;
+        --color-pink: #e699d7;
+        --color-green: #d2ef83;
+        --color-blue: #9ae6fc;
+        --color-purple: #787ac6;
+        --color-background: #383967;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-background text-white min-h-dvh p-6 flex justify-center items-center"
+  >
+    <div
+      id="toast"
+      class="fixed z-50 top-14 right-8 translate-y-0 opacity-0 pointer-events-none transition-all duration-300 px-8 py-4 bg-background border border-slate-100/20 rounded-md shadow-lg"
+    >
+      <h1 id="info" class="font-bold"></h1>
+      <p id="message" class="text-xs font-medium mt-1"></p>
+    </div>
+
+    <div
+      id="loaderMember"
+      class="fixed inset-0 z-40 w-screen h-screen bg-background flex justify-center items-center"
+    >
+      <p class="text-blue text-lg">Memuat data member...</p>
+    </div>
+
+    <div class="w-full max-w-6xl flex items-stretch justify-center gap-8">
+      <div
+        id="member"
+        class="hidden w-1/3 p-8 bg-slate-100/20 border border-slate-100/20 rounded-xl flex-col gap-4"
+      >
+        <h1 class="font-bold text-xl text-blue">Tim Marsha</h1>
+        <p>Anggota</p>
+
+        <div id="members" class="grid divide-y divide-slate-100/20 gap-2"></div>
+      </div>
+
+      <div
+        id="loaderAssignment"
+        class="hidden w-full p-8 bg-slate-100/20 border border-slate-100/20 rounded-xl justify-center items-center"
+      >
+        <p class="text-blue text-lg">Memuat data tugas...</p>
+      </div>
+
+      <div
+        id="assignments"
+        class="hidden w-full flex-col p-8 bg-slate-100/10 border border-slate-100/20 rounded-xl gap-4"
+      >
+        <p
+          id="memberName"
+          class="text-xl font-bold text-blue pb-4 border-b border-slate-100/20"
+        ></p>
+
+        <form id="taskForm" class="flex flex-wrap gap-2">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Cari atau tulis tugas..."
+            class="flex-1 min-w-0 pl-4 py-3 pr-4 bg-white/10 border border-slate-100/20 rounded-lg outline-none focus:border-blue text-white text-sm"
+          />
+
+          <button
+            id="cari"
+            type="submit"
+            class="bg-soft-pink text-background text-sm px-4 py-2 rounded-lg cursor-pointer hover:opacity-80"
+          >
+            Cari
+          </button>
+
+          <button
+            id="tambah"
+            type="button"
+            class="bg-green text-background text-sm px-4 py-2 rounded-lg cursor-pointer hover:opacity-80"
+          >
+            Tambah
+          </button>
+        </form>
+
+        <p id="taskTotal" class="text-sm text-blue font-medium"></p>
+
+        <div
+          id="assignmentList"
+          class="text-sm grid gap-4 divide-y divide-slate-100/20"
+        ></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

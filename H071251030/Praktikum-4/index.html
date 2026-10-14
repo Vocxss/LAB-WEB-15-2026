@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entah apa namanya</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script>
       let namePerson = prompt("Masukkan nama anda", "Tsaqif");
 
@@ -49,7 +50,7 @@
 
         hasil.forEach((item) => {
           document.write(
-            `<div class="card"><div class="kiri"><p class="nama">${item.nama}</p><p class="rata">Rata-rata nilai: ${item.rerata}</p></div><div class="kanan">${item.status == "Lulus" ? "<p class='lulus'>" : "<p class='tidaklulus'>"}${item.status}</p></div></div>`,
+            `<div class="card"><div class="kiri"><p class="text-green-600">${item.nama}</p><p class="rata">Rata-rata nilai: ${item.rerata}</p></div><div class="kanan">${item.status == "Lulus" ? "<p class='lulus'>" : "<p class='tidaklulus'>"}${item.status}</p></div></div>`,
           );
         });
       }

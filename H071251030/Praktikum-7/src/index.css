@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+      --font-serif: "Bricolage Grotesque", serif;
+      --font-sans: "Inclusive Sans", sans-serif;
+      --font-mono: "Roboto Mono", monospace;
+      --color-blue: #89b4ca;
+      --color-orange: #c03001;
+      --color-primary: #c03001;
+      --color-secondary: #febf6f;
+      --color-foreground: #522c25;
+      --color-background: #f6ede3;
+    }
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
